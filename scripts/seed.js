@@ -234,6 +234,6 @@ async function seed() {
 }
 
 seed().catch(err => {
-  console.error('\nSeed failed:', err.message)
+  console.error('\nSeed failed FULL ERROR:\n', err)
   process.exit(1)
 })
