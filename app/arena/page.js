@@ -18,6 +18,7 @@ export default async function ArenaIndexPage() {
      LIMIT 1`,
     [session.user.dbId]
   )
+ console.log("USER ID:", session.user.dbId)
 
   const firstLevel = result.rows[0]
   if (firstLevel) {

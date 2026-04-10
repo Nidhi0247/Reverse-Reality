@@ -42,7 +42,7 @@ export default function LoginPage() {
             INITIALIZING SECURE CHANNEL...
           </p>
           <h1 className="text-white font-mono text-3xl font-bold mb-2">
-            PROMPT BREAKER
+            Reverse Reality 
           </h1>
           <p className="text-white/30 font-mono text-xs tracking-widest">
             AUTHORIZED PERSONNEL ONLY
