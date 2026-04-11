@@ -6,10 +6,14 @@ const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY
 const OPENROUTER_URL     = 'https://openrouter.ai/api/v1/chat/completions'
 
 // ── Model to use for the actual bots ──
-const BOT_MODEL   = 'arcee-ai/trinity-large-preview:free'
+// const BOT_MODEL   = 'arcee-ai/trinity-large-preview:free'
+
+const BOT_MODEL = "z-ai/glm-4.5-air:free"
 
 // ── Model to use for the judge that decides if the bot response broke character or not ──
-const JUDGE_MODEL = 'arcee-ai/trinity-large-preview:free'
+// const JUDGE_MODEL = 'arcee-ai/trinity-large-preview:free'
+
+const JUDGE_MODEL = "z-ai/glm-4.5-air:free"
 
 // ── Call OpenRouter ──
 async function callOpenRouter(systemPrompt, userPrompt, model) {
