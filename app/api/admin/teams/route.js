@@ -11,6 +11,7 @@ async function isAdmin() {
   
   return cookie?.value === process.env.ADMIN_PASSWORD
 }
+
 export async function GET() {
   if (!isAdmin()) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -67,6 +68,9 @@ export async function POST(req) {
      RETURNING id`,
     [teamId, teamName, passwordHash, college || '']
   )
+
+  console.log("Team Result : ",teamResult.rows);
+
   const newTeamId = teamResult.rows[0].id
 
   const levels = await pool.query('SELECT id FROM levels')
@@ -78,6 +82,8 @@ export async function POST(req) {
       [newTeamId, level.id]
     )
   }
+
+  console.log("Levels : ", levels.rows);
 
   return NextResponse.json({ ok: true, teamId })
 }

@@ -5,6 +5,7 @@ import pool from '@/lib/db'
 
 export default async function ArenaIndexPage() {
   const session = await getServerSession(authOptions)
+  console.log("Session :", session);
   if (!session) redirect('/login')
 
   // Find the first unlocked level for this team
